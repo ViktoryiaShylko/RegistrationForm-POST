@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Registration form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <form novalidate>
+                <h1>Registration</h1>
+                <input type="text" name="name" placeholder="First name" id="name" required><br>
+                <input type="text" name="surname" placeholder="Last name" id="surname" required> <br>
+                <input type="text" name="login" placeholder="Login" id="login" required> <br>
+                <input type="text" name="password" placeholder="Password" id="password" minlength="6"> <br>
+                <input type="text" name="email" placeholder="Email" id="email"
+                    pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required> <br>
+                <input type="number" name="age" placeholder="Age" id="age" min="1">
+                <input type="tel" name="phone" placeholder="+7 (123) 456-78-90" id="phoneNumber" maxlength="30" required
+                    pattern="\+?[0-9\s\-\(\)]+">
+                <button type="submit" class="btn">Register</button>
+                <div id="errorsInfo"></div>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
