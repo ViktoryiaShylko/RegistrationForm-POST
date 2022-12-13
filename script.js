@@ -45,11 +45,11 @@ btn.addEventListener("click", function (e) {
     age: age.value,
     phoneNumber: phoneNumber.value,
   };
-  post();
   console.log(errors);
+  if (errors == false) postData();
 });
 
-async function post() {
+function postData() {
   fetch("https://httpbin.org/post", {
     method: "POST",
     headers: {
